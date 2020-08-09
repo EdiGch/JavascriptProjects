@@ -1,17 +1,8 @@
-var books  = document.querySelectorAll('#book-list li .name');
+const banner = document.querySelector('#page-banner');
 
-Array.from(books).forEach(function (book) {
+console.log('#page-banner node type is:', banner.nodeType);
+console.log('#page-banner node name is:', banner.nodeName);
+console.log('#page-banner has child nodes:', banner.hasChildNodes());
 
-       book.textContent +=  ' (book title)';
-
-       console.log(book.textContent);
-})
-
-
-
-var shopBooks  = document.getElementsByClassName('name');
-
-
-const bookList = document.querySelector('#book-list');
-
-bookList.innerHTML += '<p>Add html</p>';
+const clonedBanner = banner.cloneNode(true);
+console.log(clonedBanner);
